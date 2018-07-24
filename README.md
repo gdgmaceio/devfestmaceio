@@ -1,4 +1,4 @@
-# Devfestmaceio
+# DevFest Maceió 2018 - GDG
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
