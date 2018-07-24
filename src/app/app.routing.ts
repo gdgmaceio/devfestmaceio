@@ -7,6 +7,7 @@ import { DevfestLayoutComponent } from './layouts';
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
   {
@@ -14,7 +15,10 @@ export const routes: Routes = [
     component: DevfestLayoutComponent,
     data: {
       title: 'DevFest Maceió 2018 - GDG'
-    }
+    },
+    children: [
+      { path: 'inicio', loadChildren: './views/home/home.module#HomeModule' }
+    ]
   }
 ];
 
