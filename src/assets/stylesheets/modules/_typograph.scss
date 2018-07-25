@@ -68,26 +68,6 @@ strong,
 .title,
 .subtitle {
   font-family: $font-primary, $font-secondary, sans-serif;
-
-  // Weights
-  &.-light {
-    font-weight: 300;
-  }
-
-  &.-bold {
-    font-weight: 700;
-  }
-
-  // Colors
-  &.-white {
-    color: $white-base;
-  }
-  &.-grey {
-    color: $black-base;
-  }
-  &.-green {
-    color: $green-medium;
-  }
 }
 
 .title {
@@ -127,4 +107,21 @@ strong,
 }
 .-textright {
   text-align: right;
+}
+
+// Colors
+.-white {
+  color: $white-base;
+}
+.-grey {
+  color: $black-base;
+}
+.-red {
+  color: $red-medium;
+}
+.-green {
+  color: $green-medium;
+}
+.-blue {
+  color: $blue-medium;
 }
