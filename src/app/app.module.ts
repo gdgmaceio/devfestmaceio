@@ -10,7 +10,7 @@ import { DevfestLayoutComponent } from './layouts';
 const APP_LAYOUTS = [DevfestLayoutComponent];
 
 // Import components
-import { AppHeaderComponent } from './components';
+import { AppHeaderComponent, AppLogoComponent, AppNavigationComponent } from './components';
 
 const APP_COMPONENTS = [AppHeaderComponent];
 
@@ -20,6 +20,8 @@ import { AppRoutingModule } from './app.routing';
 @NgModule({
   declarations: [
     AppComponent,
+    AppLogoComponent,
+    AppNavigationComponent,
     ...APP_LAYOUTS,
     ...APP_COMPONENTS
   ],
