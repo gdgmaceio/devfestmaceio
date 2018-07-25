@@ -1,29 +1,13 @@
 /* ===============
 
-Component: App Header
+Component: Header
 Author: Thiago Queiroz
 
 =============== */
 
-
-.app-header {
-  & {
-    background: #fff;
-  }
-
-  .logo {
-    > .image {
-      max-width: 72px;
-    }
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .app-header {
-    .logo {
-      > .image {
-        max-width: 52px;
-      }
-    }
-  }
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 300px);
+  grid-gap: 30px;
 }
