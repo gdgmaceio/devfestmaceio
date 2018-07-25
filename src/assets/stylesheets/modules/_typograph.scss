@@ -41,61 +41,10 @@ a {
   }
 }
 
-// Sizes
-small {
-  font-size: $font-small;
-}
-
-// Weights
-.-light {
-  font-weight: 300;
-}
-
-.-regular {
-  font-weight: 400;
-}
-
-.-semibold {
-  font-weight: 600;
-}
-
-strong,
-.-bold {
-  font-weight: 700;
-}
-
 // Styles
 .title,
 .subtitle {
   font-family: $font-primary, $font-secondary, sans-serif;
-}
-
-.title {
-  @extend .-bold;
-
-  &.-small {
-    font-size: $font-small;
-  }
-  &.-medium {
-    font-size: $font-medium;
-  }
-  &.-large {
-    font-size: $font-large;
-  }
-}
-
-.subtitle {
-  @extend .-light;
-
-  &.-small {
-    font-size: $font-small;
-  }
-  &.-medium {
-    font-size: $font-medium;
-  }
-  &.-large {
-    font-size: $font-large;
-  }
 }
 
 // Align
@@ -107,6 +56,33 @@ strong,
 }
 .-textright {
   text-align: right;
+}
+
+// Sizes
+small,
+.-small {
+  font-size: $font-small;
+}
+.-medium {
+  font-size: $font-medium;
+}
+.-large {
+  font-size: $font-large;
+}
+
+// Weights
+.-light {
+  font-weight: light;
+}
+.-regular {
+  font-weight: normal;
+}
+.-semibold {
+  font-weight: bold;
+}
+strong,
+.-bold {
+  font-weight: 700;
 }
 
 // Colors
