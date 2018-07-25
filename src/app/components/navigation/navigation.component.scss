@@ -1,0 +1,21 @@
+/* ===============
+
+Component: Navigation
+Author: Thiago Queiroz
+
+=============== */
+
+@import "../../../assets/stylesheets/core/variables";
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+
+  > .link {
+    margin-left: 1rem;
+    color: $grey-dark;
+    text-decoration: none;
+  }
+}
