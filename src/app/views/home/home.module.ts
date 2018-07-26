@@ -1,7 +1,8 @@
-import {NgModule} from '@angular/core';
-import {HomeRoutingModule} from './home-routing.module';
-import {HomeComponent} from './home.component';
-import { WeAreBackComponent } from './../../components';
+import { NgModule } from '@angular/core';
+import { HomeRoutingModule } from './home-routing.module';
+import { HomeComponent } from './home.component';
+import { WeAreBackComponent } from '../../components';
+import { SpeakerComponent } from '../../components';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { WeAreBackComponent } from './../../components';
   ],
   declarations: [
     HomeComponent,
-    WeAreBackComponent
+    WeAreBackComponent,
+    SpeakerComponent
   ]
 })
 
