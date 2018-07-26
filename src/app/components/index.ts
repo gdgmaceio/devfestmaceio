@@ -4,3 +4,4 @@ export * from './logo';
 export * from './navigation';
 export * from './weareback';
 export * from './speaker';
+export * from './location';

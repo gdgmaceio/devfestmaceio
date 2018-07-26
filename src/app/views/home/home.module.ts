@@ -3,6 +3,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { WeAreBackComponent } from '../../components';
 import { SpeakerComponent } from '../../components';
+import { LocationComponent } from '../../components';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { SpeakerComponent } from '../../components';
   declarations: [
     HomeComponent,
     WeAreBackComponent,
-    SpeakerComponent
+    SpeakerComponent,
+    LocationComponent
   ]
 })
 
