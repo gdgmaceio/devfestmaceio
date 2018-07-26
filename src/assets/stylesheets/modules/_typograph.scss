@@ -22,6 +22,22 @@ Author: Thiago Queiroz
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato_light-webfont.woff2') format('woff2'),
+         url('../fonts/lato_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato_thin-webfont.woff2') format('woff2'),
+         url('../fonts/lato_thin-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
 // Base
 body {
   color: $grey-dark;
@@ -44,7 +60,7 @@ a {
 // Styles
 .title,
 .subtitle {
-  font-family: $font-primary, $font-secondary, sans-serif;
+  font-family: $font-secondary, sans-serif;
 }
 
 // Align
@@ -132,4 +148,12 @@ strong,
 }
 .-uppercase {
   text-transform: uppercase;
+}
+
+// Transform
+.-lato {
+  font-family: $font-primary;
+}
+.-productsans {
+  font-family: $font-secondary;
 }
