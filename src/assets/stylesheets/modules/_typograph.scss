@@ -122,3 +122,14 @@ strong,
 .-blue {
   color: $blue-medium;
 }
+
+// Transform
+.-captalize {
+  text-transform: captalize;
+}
+.-lowercase {
+  text-transform: lowercase;
+}
+.-uppercase {
+  text-transform: uppercase;
+}
