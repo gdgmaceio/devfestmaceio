@@ -1,0 +1,41 @@
+/* ===============
+
+Component: Location
+Author: Thiago Queiroz
+
+=============== */
+
+@import "../../../assets/stylesheets/core/variables";
+
+.location {
+  & {
+    display: grid;
+    grid-template-columns: minmax(600px, 7fr) 4fr;
+  }
+
+  > .text {
+    & {
+      padding: 1rem 4rem 1rem 1rem;
+    }
+    > .title {
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      line-height: .8;
+
+      > .-blue {
+        margin-left: -12rem;
+      }
+    }
+
+    > .subtitle {
+      margin-bottom: 1rem;
+    }
+  }
+
+  > .photo {
+    position: relative;
+    z-index: -1;
+    right: 32%;
+  }
+}
