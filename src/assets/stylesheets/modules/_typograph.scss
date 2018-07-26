@@ -60,14 +60,32 @@ a {
 
 // Sizes
 small,
+.-xsmall {
+  font-size: $font-extra-small;
+}
+h6,
 .-small {
   font-size: $font-small;
 }
-.-medium {
+h5,
+.-large {
   font-size: $font-medium;
 }
+h4,
+.-large {
+  font-size: $font-normal;
+}
+h3,
 .-large {
   font-size: $font-large;
+}
+h2,
+.-xlarge {
+  font-size: $font-extra-large;
+}
+h1,
+.-big {
+  font-size: $font-big;
 }
 
 // Weights
@@ -90,6 +108,9 @@ strong,
   color: $white-base;
 }
 .-grey {
+  color: $grey-dark;
+}
+.-black {
   color: $black-base;
 }
 .-red {
