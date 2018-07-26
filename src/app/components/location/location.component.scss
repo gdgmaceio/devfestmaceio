@@ -9,6 +9,7 @@ Author: Thiago Queiroz
 
 .location {
   & {
+    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: minmax(600px, 7fr) 4fr;
   }
@@ -21,7 +22,7 @@ Author: Thiago Queiroz
       margin-bottom: 1rem;
       display: flex;
       flex-direction: column;
-      line-height: .8;
+      line-height: 1;
 
       > .-blue {
         margin-left: -12rem;
