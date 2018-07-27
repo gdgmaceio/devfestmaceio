@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { WeAreBackComponent } from '../../components';
 import { SpeakerComponent } from '../../components';
 import { LocationComponent } from '../../components';
+import { ForYouComponent } from '../../components';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { LocationComponent } from '../../components';
     HomeComponent,
     WeAreBackComponent,
     SpeakerComponent,
-    LocationComponent
+    LocationComponent,
+    ForYouComponent
   ]
 })
 
