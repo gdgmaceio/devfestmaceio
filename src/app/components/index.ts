@@ -6,3 +6,4 @@ export * from './weareback';
 export * from './speaker';
 export * from './location';
 export * from './foryou';
+export * from './lookingfaraway';

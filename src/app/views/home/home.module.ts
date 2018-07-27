@@ -5,6 +5,7 @@ import { WeAreBackComponent } from '../../components';
 import { SpeakerComponent } from '../../components';
 import { LocationComponent } from '../../components';
 import { ForYouComponent } from '../../components';
+import { LookingFarAwayComponent } from '../../components';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ForYouComponent } from '../../components';
     WeAreBackComponent,
     SpeakerComponent,
     LocationComponent,
-    ForYouComponent
+    ForYouComponent,
+    LookingFarAwayComponent
   ]
 })
 
