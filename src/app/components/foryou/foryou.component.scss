@@ -1,0 +1,62 @@
+/* ===============
+
+Component: For You
+Author: Thiago Queiroz
+
+=============== */
+
+@import "assets/stylesheets/core/variables";
+
+.for-you {
+  & {
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-gap: 30px;
+  }
+
+  .text {
+    padding: 17rem 2rem 2rem 0;
+    
+    > .title {
+      margin-bottom: 1rem;
+      line-height: .8;
+    }
+  }
+
+  > .info {
+    > .coconut {
+      > .image {
+        margin-bottom: -6px;
+        width: calc(100% + 69px);
+      }
+    }
+
+    > .list {
+      & {
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        background: $green-medium;
+        color: $white-base
+      }
+      
+      > .item {
+        & {
+          padding: 2rem;
+          font-size: 1.8rem;
+        }
+
+        &:after {
+          display: block;
+          width: 69px;
+          height: 8px;
+          background: url("../../../assets/images/green-wave-small.png") center no-repeat;
+          content: "";
+        }
+      }
+    }
+  }
+}
