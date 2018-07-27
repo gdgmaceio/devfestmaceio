@@ -1,0 +1,33 @@
+/* ===============
+
+Module: Helpers
+Author: Thiago Queiroz
+
+=============== */
+
+// Margins and Paddings
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50);
+$sides: (top, bottom, left, right);
+@each $space in $spaceamounts {
+  .m--#{$space} {
+    margin: #{$space}px;
+  }
+  .p--#{$space} {
+    padding: #{$space}px;
+  }
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px;
+    }
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px;
+    }
+    .#{str-slice($side, 0, 1)}-#{$space} {
+      #{$side}: #{$space}px;
+    }
+  }
+}
+
+.m--auto {
+  margin: auto;
+}
