@@ -1,0 +1,72 @@
+/* ===============
+
+Component: About
+Author: Thiago Queiroz
+
+=============== */
+
+@import "assets/stylesheets/core/variables";
+
+.about {
+  & {
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: minmax(700px, 7fr) 4fr;
+  }
+
+  > .photo {
+    & {
+      position: relative;
+      right: 4rem;
+      padding: 1rem 1rem 0 0;
+      position: relative;
+      background: url("../../../assets/images/colour-background.png") top right no-repeat;
+    }
+
+    &:before {
+      z-index: 1;
+      position: absolute;
+      left: -4rem;
+      bottom: -.8rem;
+      content: "";
+      display: block;
+      width: 423px;
+      height: 36px;
+      background: url("../../../assets/images/blue-wave.png") center no-repeat;
+    }
+
+    &:after {
+      z-index: 1;
+      position: absolute;
+      right: -1rem;
+      bottom: -2.8rem;
+      content: "";
+      display: block;
+      width: 70px;
+      height: 103px;
+      background: url("../../../assets/images/arrow-gdg.png") center no-repeat;
+    }
+
+    .image {
+      width: 100%;
+    }
+
+    .legend {
+      padding: 1rem;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: $white-base;
+    }
+  }
+
+  > .text {
+    & {
+      margin: 1rem 2rem 3rem;
+    }
+
+    > .title {
+      line-height: .8;
+    }
+  }
+}

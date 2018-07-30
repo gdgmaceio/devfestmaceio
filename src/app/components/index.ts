@@ -7,3 +7,4 @@ export * from './speaker';
 export * from './location';
 export * from './foryou';
 export * from './lookingfaraway';
+export * from './about';
