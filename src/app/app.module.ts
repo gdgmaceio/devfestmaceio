@@ -10,9 +10,14 @@ import { DevfestLayoutComponent } from './layouts';
 const APP_LAYOUTS = [DevfestLayoutComponent];
 
 // Import components
-import { AppHeaderComponent, AppLogoComponent, AppNavigationComponent } from './components';
+import { AppHeaderComponent, AppLogoComponent, AppNavigationComponent, AppFooterComponent } from './components';
 
-const APP_COMPONENTS = [AppHeaderComponent];
+const APP_COMPONENTS = [
+  AppHeaderComponent,
+  AppLogoComponent,
+  AppNavigationComponent,
+  AppFooterComponent
+];
 
 // Import routing module
 import { AppRoutingModule } from './app.routing';
@@ -20,8 +25,6 @@ import { AppRoutingModule } from './app.routing';
 @NgModule({
   declarations: [
     AppComponent,
-    AppLogoComponent,
-    AppNavigationComponent,
     ...APP_LAYOUTS,
     ...APP_COMPONENTS
   ],
