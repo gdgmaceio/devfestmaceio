@@ -17,7 +17,8 @@ export const routes: Routes = [
       title: 'DevFest Maceió 2018 - GDG'
     },
     children: [
-      { path: 'inicio', loadChildren: './views/home/home.module#HomeModule' }
+      { path: 'inicio', loadChildren: './views/home/home.module#HomeModule' },
+      { path: 'palestrantes', loadChildren: './views/speakers/speakers.module#SpeakersModule' }
     ]
   }
 ];
