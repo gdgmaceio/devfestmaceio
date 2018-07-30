@@ -11,7 +11,9 @@ Author: Thiago Queiroz
   & {
     margin-bottom: 2rem;
     display: grid;
-    grid-template-columns: minmax(600px, 7fr) 4fr;
+    grid-template-columns: minmax(700px, 7fr) 4fr;
+    grid-gap: 60px;
+    // grid-template-columns: minmax(600px, 7fr) 4fr;
   }
 
   > .text {
@@ -35,8 +37,15 @@ Author: Thiago Queiroz
   }
 
   > .photo {
-    position: relative;
-    z-index: -1;
-    right: 32%;
+    & {
+      right: 4rem;
+      position: relative;
+      z-index: -1;
+      width: calc(100% + 4rem);
+    }
+
+    .image {
+      width: 100%;
+    }
   }
 }
