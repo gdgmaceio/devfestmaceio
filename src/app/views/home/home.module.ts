@@ -6,21 +6,18 @@ import { SpeakerComponent } from '../../components';
 import { LocationComponent } from '../../components';
 import { ForYouComponent } from '../../components';
 import { LookingFarAwayComponent } from '../../components';
-
+import { AboutComponent } from '../../components';
 
 @NgModule({
-  imports: [
-    HomeRoutingModule
-  ],
+  imports: [HomeRoutingModule],
   declarations: [
     HomeComponent,
     WeAreBackComponent,
     SpeakerComponent,
     LocationComponent,
     ForYouComponent,
-    LookingFarAwayComponent
+    LookingFarAwayComponent,
+    AboutComponent
   ]
 })
-
-export class HomeModule {
-}
+export class HomeModule {}
