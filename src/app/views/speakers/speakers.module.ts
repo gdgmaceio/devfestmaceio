@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { SpeakersRoutingModule } from './speakers-routing.module';
 import { SpeakersComponent } from './speakers.component';
-import { SpeakerComponent } from '../../components';
+
+import { SpeakerModule } from '../../components/speaker/speaker.module';
 
 @NgModule({
-  imports: [SpeakersRoutingModule],
-  declarations: [SpeakersComponent, SpeakerComponent]
+  imports: [
+    SpeakersRoutingModule,
+    SpeakerModule
+  ],
+  declarations: [SpeakersComponent]
 })
 export class SpeakersModule {}
