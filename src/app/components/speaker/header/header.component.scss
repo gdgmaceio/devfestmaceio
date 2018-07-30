@@ -8,6 +8,10 @@ Author: Thiago Queiroz
 @import "assets/stylesheets/core/variables";
 
 .speaker-header {
+  & {
+    margin-bottom: 5rem;
+  }
+
   > .title {
     & {
       display: flex;
