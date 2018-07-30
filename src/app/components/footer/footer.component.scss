@@ -1,0 +1,86 @@
+/* ===============
+
+Component: Footer
+Author: Thiago Queiroz
+
+=============== */
+
+.footer {
+  & {
+    padding: 4rem 0 2rem;
+    background: #ebebeb;
+  }
+  
+  > .content {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 3fr 3fr 6fr;
+    grid-template-areas: "title . ."
+                         "contact info copyright";
+    grid-gap: 30px;
+    line-height: 1.8;
+  }
+
+  .title {
+    line-height: .8;
+    grid-area: title;
+  }
+
+  .contact {
+    grid-area: contact;
+  }
+  .info {
+    grid-area: info;
+  }
+  .copyright {
+    & {
+      position: relative;
+      grid-area: copyright;
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      bottom: -2rem;
+      right: 6rem;
+      width: 346px;
+      height: 420px;
+      background: url("../../../assets/images/statue-of-liberty.png") top no-repeat;
+      content: "";
+    }
+  }
+
+  .medias {
+    display: flex;
+    flex-direction: row;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .content {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .content {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .content {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .content {
+    max-width: 1140px;
+  }
+}

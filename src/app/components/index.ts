@@ -8,3 +8,4 @@ export * from './location';
 export * from './foryou';
 export * from './lookingfaraway';
 export * from './about';
+export * from './footer';
