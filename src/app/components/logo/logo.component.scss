@@ -10,4 +10,8 @@ Author: Thiago Queiroz
   justify-content: flex-start;
   align-items: center;
   height: 100%;
+
+  > .link {
+    display: inline-block;
+  }
 }
