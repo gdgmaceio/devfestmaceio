@@ -4,6 +4,7 @@ export * from './logo';
 export * from './navigation';
 export * from './weareback';
 export * from './speaker';
+export * from './organizer';
 export * from './location';
 export * from './foryou';
 export * from './lookingfaraway';
