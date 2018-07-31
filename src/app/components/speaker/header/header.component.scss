@@ -11,22 +11,4 @@ Author: Thiago Queiroz
   & {
     margin-bottom: 5rem;
   }
-
-  > .title {
-    & {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-
-    &:after {
-      margin-left: 3rem;
-      margin-right: -100px;
-      display: block;
-      width: 233px;
-      height: 160px;
-      background: url("../../../../assets/images/colour-waves.png") center no-repeat;
-      content: "";
-    }
-  }
 }
