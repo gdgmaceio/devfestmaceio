@@ -63,6 +63,62 @@ a {
   font-family: $font-secondary, sans-serif;
 }
 
+.title {
+  // Colors
+  &.-colourwaves,
+  &.-bluewaves {
+    & {
+      display: flex;
+      align-items: center;
+    }
+    &:after,
+    &:before {
+      display: block;
+      width: 162px;
+      height: 111px;
+      content: "";
+    }
+  }
+  &.-colourwaves {
+    &:after,
+    &:before {
+      background: url("/assets/images/colour-waves.png") center no-repeat;
+    }
+  }
+  &.-bluewaves {
+    &:after,
+    &:before {
+      background: url("/assets/images/colour-waves.png") center no-repeat;
+    }
+  }
+  
+  // Align
+  &.-alignright {
+    & {
+      justify-content: flex-end;
+    }
+    &:before {
+      display: none;
+    }
+    &:after {
+      margin-left: 3rem;
+      margin-right: -100px;
+    }
+  }
+  &.-alignleft {
+    & {
+      justify-content: flex-start;
+    }
+    &:before {
+      margin-left: -100px;
+      margin-right: 3rem;
+    }
+    &:after {
+      display: none;
+    }
+  }
+}
+
 // Align
 .-textleft {
   text-align: left;
