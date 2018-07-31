@@ -1,0 +1,71 @@
+/* ===============
+
+Component: Organizer Profile
+Author: Thiago Queiroz
+
+=============== */
+
+@import "assets/stylesheets/core/variables";
+
+.team-profile {
+  & {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+
+  > .photo {
+    & {
+      display: flex;
+      justify-content: flex-end;
+      padding: .75rem .75rem .75rem 3rem;
+      position: relative;
+      background: url("../../../../../assets/images/colour-background.png") top right no-repeat;
+      background-size: 75%;
+    }
+
+    &:after {
+      position: absolute;
+      bottom: -.35rem;
+      left: 0;
+      display: block;
+      width: 423px;
+      height: 36px;
+      background: url("../../../../../assets/images/red-wave.png") bottom no-repeat;
+      background-size: contain;
+      content: "";
+    }
+  }
+
+  > .text {
+    & {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 350px;
+    }
+
+    .subtitle {
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      margin-bottom: 1rem;
+    }
+
+    .medias {
+      & {
+        display: flex;
+        width: 100%;
+      }
+
+      >.link {
+        color: $grey-dark;
+        margin-right: .5rem;
+        &:hover {
+          color: $blue-medium;
+        }
+      }
+    }
+  }
+}
