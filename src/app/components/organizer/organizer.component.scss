@@ -1,14 +1,13 @@
 /* ===============
 
-Component: Speaker
+Component: Organizer
 Author: Thiago Queiroz
 
 =============== */
 
 @import "assets/stylesheets/core/variables";
 
-.speaker-header {
-  & {
-    margin-bottom: 5rem;
-  }
+.organizer {
+  margin-bottom: 2rem;
+  position: relative;
 }

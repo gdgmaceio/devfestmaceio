@@ -15,7 +15,10 @@ Author: Thiago Queiroz
 
   > .link {
     margin-left: 1rem;
-    color: $grey-dark;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

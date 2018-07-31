@@ -1,0 +1,33 @@
+/* ===============
+
+Component: Staff Header
+Author: Thiago Queiroz
+
+=============== */
+
+@import "assets/stylesheets/core/variables";
+
+.staff-header {
+  & {
+    position: relative;
+    margin-bottom: 5rem;
+  }
+
+  &:after {
+    position: absolute;
+    top: -50%;
+    right: -2rem;
+    display: block;
+    width: 391px;
+    height: 224px;
+    content: "";
+    background: url("../../../../../assets/images/seagulls-waves.png") center no-repeat;
+  }
+
+  >.title {
+    &:after {
+      display: block;
+      background: url("../../../../../assets/images/arrow-gdg.png") center no-repeat;
+    }
+  }
+}

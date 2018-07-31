@@ -1,0 +1,29 @@
+/* ===============
+
+Component: Staff
+Author: Thiago Queiroz
+
+=============== */
+
+@import "assets/stylesheets/core/variables";
+
+.organizer-staff {
+  & {
+    margin-bottom: 10rem;
+    position: relative;
+    display: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &:after {
+    position: absolute;
+    left: -25rem;
+    bottom: 0;
+    display: block;
+    width: 326px;
+    height: 224px;
+    content: "";
+    background: url("../../../../assets/images/grey-waves.png") center no-repeat;
+  }
+}

@@ -1,0 +1,16 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-organizer-team',
+  templateUrl: './team.component.html',
+  styleUrls: ['./team.component.scss']
+})
+
+export class OrganizerTeamComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

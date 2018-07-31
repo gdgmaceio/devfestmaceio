@@ -18,7 +18,8 @@ export const routes: Routes = [
     },
     children: [
       { path: 'inicio', loadChildren: './views/home/home.module#HomeModule' },
-      { path: 'palestrantes', loadChildren: './views/speakers/speakers.module#SpeakersModule' }
+      { path: 'palestrantes', loadChildren: './views/speakers/speakers.module#SpeakersModule' },
+      { path: 'organizadores', loadChildren: './views/organizers/organizers.module#OrganizersModule' }
     ]
   }
 ];
