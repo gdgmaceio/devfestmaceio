@@ -11,40 +11,28 @@ Author: Thiago Queiroz
   & {
     margin-bottom: 10rem;
     display: grid;
-    grid-template-columns: minmax(700px, 7fr) 4fr;
+    grid-template-areas: "text" "photo";
   }
 
   > .photo {
     & {
+      grid-area: photo;
       position: relative;
-      right: 4rem;
-      padding: 1rem 1rem 0 0;
-      position: relative;
-      background: url("../../../assets/images/colour-background.png") top right no-repeat;
+      padding-top: 1rem;
+      background: url("/assets/images/colour-background.png") top right no-repeat;
     }
 
     &:before {
       z-index: 1;
-      position: absolute;
-      left: -4rem;
-      bottom: -.8rem;
-      content: "";
       display: block;
-      width: 423px;
-      height: 36px;
-      background: url("../../../assets/images/blue-wave.png") center no-repeat;
-    }
-
-    &:after {
-      z-index: 1;
       position: absolute;
-      right: -1rem;
-      bottom: -2.8rem;
+      bottom: -.25rem;
+      left: -3rem;
+      width: 228px;
+      height: 19px;
+      background: url("/assets/images/blue-wave.png") center no-repeat;
+      background-size: contain;
       content: "";
-      display: block;
-      width: 70px;
-      height: 103px;
-      background: url("../../../assets/images/arrow-gdg.png") center no-repeat;
     }
 
     .image {
@@ -62,11 +50,61 @@ Author: Thiago Queiroz
 
   > .text {
     & {
+      grid-area: text;
       margin: 1rem 2rem 3rem;
     }
 
     > .title {
+      margin-bottom: 1rem;
       line-height: .8;
+    }
+    
+    > .more {
+      > .link {
+        & {
+          text-decoration: none;
+          line-height: 1;
+        }
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .about {
+    & {
+      grid-template-areas: "photo text";
+      grid-template-columns: minmax(700px, 7fr) 4fr;
+    }
+
+    > .photo {
+      & {
+        right: 4rem;
+        padding: 1rem 1rem 0 0;
+      }
+
+      &:before {
+        left: -4rem;
+        bottom: -.8rem;
+        width: 423px;
+        height: 36px;
+      }
+
+      &:after {
+        z-index: 1;
+        position: absolute;
+        right: -1rem;
+        bottom: -2.8rem;
+        content: "";
+        display: block;
+        width: 70px;
+        height: 103px;
+        background: url("/assets/images/arrow-gdg.png") center no-repeat;
+      }
     }
   }
 }
