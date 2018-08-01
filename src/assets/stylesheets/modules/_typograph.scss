@@ -57,68 +57,6 @@ a {
   }
 }
 
-// Styles
-.title,
-.subtitle {
-  font-family: $font-secondary, sans-serif;
-}
-
-.title {
-  // Colors
-  &.-colourwaves,
-  &.-bluewaves {
-    & {
-      display: flex;
-      align-items: center;
-    }
-    &:after,
-    &:before {
-      display: block;
-      width: 162px;
-      height: 111px;
-      content: "";
-    }
-  }
-  &.-colourwaves {
-    &:after,
-    &:before {
-      background: url("/assets/images/colour-waves.png") center no-repeat;
-    }
-  }
-  &.-bluewaves {
-    &:after,
-    &:before {
-      background: url("/assets/images/blue-waves.png") center no-repeat;
-    }
-  }
-  
-  // Align
-  &.-alignright {
-    & {
-      justify-content: flex-end;
-    }
-    &:before {
-      display: none;
-    }
-    &:after {
-      margin-left: 3rem;
-      margin-right: -100px;
-    }
-  }
-  &.-alignleft {
-    & {
-      justify-content: flex-start;
-    }
-    &:before {
-      margin-left: -100px;
-      margin-right: 3rem;
-    }
-    &:after {
-      display: none;
-    }
-  }
-}
-
 // Align
 .-textleft {
   text-align: left;
@@ -212,4 +150,105 @@ strong,
 }
 .-productsans {
   font-family: $font-secondary;
+}
+
+// Styles
+.title,
+.subtitle {
+  font-family: $font-secondary, sans-serif;
+}
+
+.title {
+  // Colors
+  &.-colourwaves,
+  &.-bluewaves {
+    & {
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+    }
+
+    &:after,
+    &:before {
+      display: block;
+      width: 86px;
+      height: 59px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
+    }
+  }
+
+  &.-colourwaves {
+    &:after,
+    &:before {
+      background-image: url("/assets/images/colour-waves.png");
+    }
+  }
+
+  &.-bluewaves {
+    &:after,
+    &:before {
+      background-image: url("/assets/images/blue-waves.png");
+    }
+  }
+  
+  // Align
+  &.-alignleft {
+    & {
+      justify-content: flex-start;
+    }
+
+    &:before {
+      margin-left: -30px;
+      margin-right: 1rem;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &.-alignright {
+    & {
+      justify-content: flex-end;
+    }
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      margin-left: 1rem;
+      margin-right: -30px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    &.-colourwaves,
+    &.-bluewaves {
+      & {
+        font-size: $font-extra-large;
+      }
+
+      &:after,
+      &:before {
+        width: 162px;
+        height: 111px;
+      }
+    }
+
+    &.-alignleft {
+      margin-left: -100px;
+      margin-right: 3rem;
+    }
+
+    &.-alignright {
+      margin-left: 3rem;
+      margin-right: -100px;
+    }
+  }
 }
