@@ -15,19 +15,40 @@ Author: Thiago Queiroz
 
   &:after {
     position: absolute;
-    top: -50%;
+    top: 50%;
     right: -2rem;
     display: block;
-    width: 391px;
-    height: 224px;
+    width: 166px;
+    height: 95px;
     content: "";
-    background: url("../../../../../assets/images/seagulls-waves.png") center no-repeat;
+    background: url("/assets/images/seagulls-waves.png") center no-repeat;
+    background-size: cover;
   }
 
   >.title {
     &:after {
       display: block;
-      background: url("../../../../../assets/images/arrow-gdg.png") center no-repeat;
+      width: 44px;
+      height: 62px;
+      background: url("/assets/images/arrow-gdg.png") center no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .staff-header {
+    &:after {
+      top: -50%;
+      width: 391px;
+      height: 224px;
+    }
+
+    > .title {
+      &:after {
+        width: 70px;
+        height: 103px;
+      }
     }
   }
 }
