@@ -11,7 +11,7 @@ Author: Thiago Queiroz
   & {
     margin-bottom: 3rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     grid-gap: 30px;
   }
 
@@ -28,7 +28,7 @@ Author: Thiago Queiroz
       width: 75%;
       margin: 0 auto 2rem;
       padding: .35rem;
-      background: url("../../../../../assets/images/blue-circle.png") center no-repeat;
+      background: url("/assets/images/blue-circle.png") center no-repeat;
       background-size: contain;
     }
 
@@ -70,11 +70,34 @@ Author: Thiago Queiroz
       justify-content: center;
       width: 100%;
     }
-    >.link {
-      color: $grey-dark;
-      margin-right: .5rem;
+
+    > .link {
+      & {
+        color: $grey-dark;
+        margin-right: 2rem;
+        font-size: $font-large;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
       &:hover {
         color: $blue-medium;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .organizer-list {
+    & {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .medias {
+      > .link {
+        margin-right: .5rem;
+        font-size: $font-normal;
       }
     }
   }
