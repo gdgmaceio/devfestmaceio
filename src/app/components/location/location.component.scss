@@ -11,15 +11,17 @@ Author: Thiago Queiroz
   & {
     margin-bottom: 2rem;
     display: grid;
-    grid-template-columns: minmax(700px, 7fr) 4fr;
+    grid-template-areas: "text" "photo";
+    grid-template-columns: 1fr;
     grid-gap: 60px;
-    // grid-template-columns: minmax(600px, 7fr) 4fr;
   }
 
   > .text {
     & {
+      grid-area: text;
       padding: 1rem 4rem 1rem 1rem;
     }
+
     > .title {
       margin-bottom: 1rem;
       display: flex;
@@ -27,7 +29,7 @@ Author: Thiago Queiroz
       line-height: 1;
 
       > .-blue {
-        margin-left: -12rem;
+        font-size: 4.5rem;
       }
     }
 
@@ -38,6 +40,7 @@ Author: Thiago Queiroz
 
   > .photo {
     & {
+      grid-area: photo;
       right: 4rem;
       position: relative;
       z-index: -1;
@@ -46,6 +49,24 @@ Author: Thiago Queiroz
 
     .image {
       width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .location {
+    & {
+      grid-template-areas: "photo text";
+      grid-template-columns: minmax(700px, 7fr) 4fr;
+    }
+
+    > .text {
+      > .title {
+        > .-blue {
+          margin-left: -12rem;
+          font-size: $font-big;
+        }
+      }
     }
   }
 }
