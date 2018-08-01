@@ -9,45 +9,98 @@ Author: Thiago Queiroz
 
 .looking-far-away {
   & {
-    margin-bottom: 8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     position: relative;
-    min-height: 530px;
+    margin-bottom: 8rem;
+    display: grid;
+    grid-template-areas: "text";
+    grid-template-columns: 1fr;
+    min-height: 870px;
   }
+  
   &:before {
     z-index: -1;
-    display: block;
     position: absolute;
-    top: 50%;
+    top: 11rem;
     left: 50%;
-    width: 2200px;
-    height: 570px;
-    background: url("../../../assets/images/lighthouse-background.png") bottom no-repeat;
-    transform: translate(-50%,-50%);
+    transform: translateX(-50%);
+    display: block;
+    width: 768px;
+    height: 691px;
+    background: url("/assets/images/lighthouse-background-mobile.png") center no-repeat;
     content: "";
   }
 
   > .text {
+    & {
+      padding: 2rem;
+      grid-area: text;
+    }
+
     > .title {
       margin-top: 2.5rem;
-      font-size: 5rem;
+      line-height: .8;
+
+      > .-blue {
+        display: block;
+      }
     }
+
     > .data {
       & {
+        height: 450px;
         padding: 4rem 0px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
       }
 
       > .item {
+        margin-bottom: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        // align-items: flex-end;
         line-height: .9;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .looking-far-away {
+    & {
+      min-height: 691px;
+      grid-template-areas: ". text text text";
+      grid-template-rows: 530px;
+    }
+    
+    &:before {
+      top: -3rem;
+      width: 2200px;
+      height: 570px;
+      background: url("/assets/images/lighthouse-background-desktop.png") center no-repeat;
+    }
+
+    > .text {
+      & {
+        padding: 0;
+      }
+
+      > .title {
+        & {
+          font-size: 5rem;
+        }
+
+        > .-blue {
+          display: inline-block;
+        }
+      }
+      
+      > .data {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 60px;
+        height: 120px;
       }
     }
   }
