@@ -5,9 +5,19 @@ Author: Thiago Queiroz
 
 =============== */
 
-.header {
+.app-header {
+  padding: 1rem;
   display: grid;
-  grid-template-columns: minmax(auto, 224px) 1fr;
-  grid-template-rows: repeat(1, 300px);
   grid-gap: 30px;
+  grid-template-columns: minmax(auto, 170px) 1fr;
+}
+
+@media only screen and (min-width: 768px) {
+  .app-header {
+    & {
+      padding: 0;
+      grid-template-columns: minmax(auto, 224px) 1fr;
+      grid-template-rows: repeat(1, 300px);
+    }
+  }
 }
