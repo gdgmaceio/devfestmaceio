@@ -13,5 +13,9 @@ Author: Thiago Queiroz
 
   > .link {
     display: inline-block;
+
+    > .image {
+      width: 100%;
+    }
   }
 }

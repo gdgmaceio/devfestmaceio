@@ -11,13 +11,16 @@ Author: Thiago Queiroz
   & {
     margin-bottom: 4rem;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
+    grid-template-areas: "text" "info";
+    grid-template-columns: 1fr;
     grid-gap: 30px;
   }
 
   .text {
-    padding: 17rem 2rem 2rem 0;
+    & {
+      padding: 2rem;
+      grid-area: text;
+    }
     
     > .title {
       margin-bottom: 1rem;
@@ -26,35 +29,87 @@ Author: Thiago Queiroz
   }
 
   > .info {
+    & {
+      grid-area: info;
+    }
+
     > .coconut {
+      & {
+        overflow: hidden;
+      }
+
       > .image {
         margin-bottom: -6px;
-        width: calc(100% + 69px);
+        width: calc(100% + 76px);
+        height: auto;
       }
     }
 
     > .list {
       & {
-        padding: 3rem;
+        // padding: 3rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         background: $green-medium;
-        color: $white-base
+        color: $white-base;
       }
       
       > .item {
         & {
           padding: 2rem;
-          font-size: 1.8rem;
         }
 
         &:after {
           display: block;
-          width: 69px;
-          height: 8px;
-          background: url("../../../assets/images/green-wave-small.png") center no-repeat;
+          width: 43px;
+          height: 5px;
+          background: url("/assets/images/green-wave-small.png") center no-repeat;
+          background-size: contain;
           content: "";
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .for-you {
+    & {
+      grid-template-areas: "text info";
+      grid-template-columns: 1fr 2fr;
+    }
+
+    > .text {
+      padding: 17rem 2rem 2rem 0;
+    }
+
+    > .info {
+      & {
+        padding: 3rem;
+      }
+
+      > .coconut {
+        & {
+          overflow: visible;
+        }
+
+        > .image {
+          width: calc(100% + 9.4%);
+        }
+      }
+
+      > .list {
+        > .item {
+          & {
+            padding: 2rem;
+            font-size: 1.8rem;
+          }
+
+          &:after {
+            width: 69px;
+            height: 8px;
+          }
         }
       }
     }

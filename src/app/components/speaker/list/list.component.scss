@@ -27,9 +27,10 @@ Author: Thiago Queiroz
       max-width: 70%;
       margin-bottom: 2rem;
       padding: 1rem;
-      background: url("../../../../assets/images/avatar-circles.png") center no-repeat;
+      background: url("/assets/images/avatar-circles.png") center no-repeat;
       background-size: contain;
     }
+
     > .photo {
       & {
         display: flex;
@@ -37,11 +38,13 @@ Author: Thiago Queiroz
         align-items: center;
         background: $white-base;
       }
+
       &.-round {
         border-radius: 50%;
         overflow: hidden;
       }
-      >.image {
+
+      > .image {
         width: 100%;
         height: auto;
       }
@@ -91,8 +94,14 @@ Author: Thiago Queiroz
       }
 
       > .link {
-        margin: 0 .5rem 0 0;
-        font-size: $font-medium;
+        & {
+          margin: 0 .5rem 0 0;
+          font-size: $font-normal;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }

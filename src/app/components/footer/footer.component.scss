@@ -5,49 +5,68 @@ Author: Thiago Queiroz
 
 =============== */
 
-.footer {
+.app-footer {
   & {
-    padding: 4rem 0 2rem;
     background: #ebebeb;
   }
   
-  > .content {
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 3fr 3fr 6fr;
-    grid-template-areas: "title . ."
-                         "contact info copyright";
-    grid-gap: 30px;
-    line-height: 1.8;
-  }
-
-  .title {
-    line-height: .8;
-    grid-area: title;
-  }
-
-  .contact {
-    grid-area: contact;
-  }
-  .info {
-    grid-area: info;
-  }
-  .copyright {
+  > .text {
     & {
       position: relative;
-      grid-area: copyright;
+      padding: 5rem 2rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.8;
+      overflow: hidden;
+      justify-content: space-around;
+      min-height: 400px;
     }
 
     &:after {
       display: block;
       position: absolute;
-      bottom: -2rem;
-      right: 6rem;
+      left: 6rem;
+      right: -3rem;
+      bottom: 0rem;
       width: 346px;
       height: 420px;
-      background: url("../../../assets/images/statue-of-liberty.png") top no-repeat;
+      background: url("/assets/images/statue-of-liberty.png") top no-repeat;
+      background-size: cover;
       content: "";
+    }
+
+    > .link {
+      & {
+        text-decoration: none;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .title {
+    grid-area: title;
+    line-height: .8;
+  }
+
+  .contact {
+    grid-area: contact;
+  }
+
+  .info {
+    grid-area: info;
+  }
+
+  .copyright {
+    & {
+      grid-area: copyright;
+    }
+
+    > .brand {
+      display: block;
     }
   }
 
@@ -55,6 +74,7 @@ Author: Thiago Queiroz
     display: flex;
     flex-direction: row;
   }
+
   .info {
     display: flex;
     flex-direction: column;
@@ -62,25 +82,56 @@ Author: Thiago Queiroz
 }
 
 @media only screen and (min-width: 576px) {
-  .content {
-    max-width: 540px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .content {
-    max-width: 960px;
+  .app-footer {
+    .text {
+      max-width: 540px;
+    }
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .content {
-    max-width: 720px;
+  .app-footer {
+    .text {
+      padding: 4rem 0 2rem;
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: 3fr 3fr 6fr;
+      grid-template-areas: "title . ."
+                           "contact info copyright";
+      max-width: 720px;
+      min-height: auto;
+      overflow: visible;
+
+      &:after {
+        left: auto;
+        right: 5rem;
+      }
+    }
+
+    .copyright {
+      & {
+        padding-left: 2rem;
+      }
+
+      > .brand {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .app-footer {
+    .text {
+      max-width: 960px;
+    }
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .content {
-    max-width: 1140px;
+  .app-footer {
+    .text {
+      max-width: 1140px;
+    }
   }
 }

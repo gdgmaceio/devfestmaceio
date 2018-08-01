@@ -9,31 +9,49 @@ Author: Thiago Queiroz
 
 .we-are-back {
   & {
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     padding-bottom: 10rem;
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
-  > .title {
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 12px;
+    background: url("/assets/images/bullets-divisor.png") center no-repeat;
+    background-size: contain;
+    content: "";
+  }
+
+  > .header {
     & {
-      position: relative;
-      font-size: 6rem;
-      line-height: .85;
+      padding: 2rem;
     }
 
-    &:after {
-      z-index: -1;
-      position: absolute;
-      bottom: -80px;
-      left: -80px;
-      content: "";
-      display: block;
-      width: 307px;
-      height: 80px;
-      background: url("../../../assets/images/green-wave.png") center no-repeat;
+    .title {
+      & {
+        position: relative;
+        line-height: .85;
+        width: 200px;
+      }
+  
+      &:after {
+        z-index: -1;
+        position: absolute;
+        bottom: -1rem;
+        left: -3rem;
+        content: "";
+        display: block;
+        width: 161px;
+        height: 16px;
+        background: url("/assets/images/green-wave.png") center no-repeat;
+        background-size: contain;
+      }
     }
   }
 
@@ -48,33 +66,72 @@ Author: Thiago Queiroz
     &:after {
       z-index: -1;
       position: absolute;
-      bottom: -50px;
+      bottom: -30px;
       right: -40px;
       display: block;
-      width: 75%;
+      width: 90%;
       height: 75%;
-      background: url("../../../assets/images/photo-red-wave.png") bottom no-repeat;
+      background: url("/assets/images/photo-red-wave.png") bottom no-repeat;
       background-size: contain;
       content: "";
     }
 
     > .hashtag {
       margin-bottom: 1rem;
-      width: 193px;
-      height: 31px;
-      background: url("../../../assets/images/hashtag-dfmcz18.png") right no-repeat;
+      margin-right: 3rem;
+      width: 111px;
+      height: 18px;
+      background: url("/assets/images/hashtag-dfmcz18.png") center no-repeat;
+      background-size: cover;
       text-indent: -9999999rem;
     }
-  }
 
-  &:after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 22px;
-    background: url("../../../assets/images/bullets-divisor.png") center no-repeat;
-    content: "";
+    > .image {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .we-are-back {
+    & {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &:after {
+      height: 22px;
+      padding-right: 5rem;
+    }
+
+    > .header {
+      > .title {
+        & {
+          font-size: 6rem;
+        }
+  
+        &:after {
+          width: 307px;
+          height: 80px;
+          bottom: -80px;
+          left: -6rem;
+        }
+      }
+    }
+
+    > .photo {
+      &:after {
+        bottom: -50px;
+        width: 75%;
+      }
+
+      > .hashtag {
+        margin-right: 0;
+        width: 195px;
+        height: 33px;
+      }
+    }
   }
 }
