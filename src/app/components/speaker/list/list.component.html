@@ -1,86 +1,40 @@
 <ul class="speaker-list">
-  <li class="item">
+  <li class="item" *ngFor="let speaker of speakers">
     <div class="avatar">
       <div class="photo -round">
-        <img class="image" src="http://via.placeholder.com/260x260" alt="Foto Nome do Palestrantes">
+        <img class="image" src="{{speaker.avatar}}"
+          alt="Foto {{speaker.name}} do Palestrantes">
       </div>
     </div>
 
     <div class="text">
-      <h3 class="name -productsans -bold -blue">Marcos Mario</h3>
-      <p class="description">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde
-        o século XVI.</p>
+      <h3 class="name -productsans -bold -blue">{{speaker.name}}</h3>
+      <p class="description">{{speaker.job}}</p>
     </div>
 
     <nav class="medias">
-      <a class="link" href="https://instagram.com/gdgmaceio" title="Instagram">
+      <a class="link"
+        href="{{speaker.instagram}}"
+        title="Instagram"
+        *ngIf="speaker.instagram">
         <i class="mdi mdi-instagram"></i>
       </a>
-      <a class="link" href="https://instagram.com/gdgmaceio" title="Facebook">
+      <a class="link"
+        href="{{speaker.facebook}}"
+        title="Facebook"
+        *ngIf="speaker.facebook">
         <i class="mdi mdi-facebook"></i>
       </a>
-      <a class="link" href="https://instagram.com/gdgmaceio" title="Twitter">
+      <a class="link"
+        href="{{speaker.twitter}}"
+        title="Twitter"
+        *ngIf="speaker.twitter">
         <i class="mdi mdi-twitter"></i>
       </a>
-      <a class="link" href="https://instagram.com/gdgmaceio" title="Linkedin">
-        <i class="mdi mdi-linkedin"></i>
-      </a>
-    </nav>
-  </li>
-
-  <li class="item">
-    <div class="avatar">
-      <div class="photo -round">
-        <img class="image" src="http://via.placeholder.com/260x260" alt="Foto Nome do Palestrantes">
-      </div>
-    </div>
-
-    <div class="text">
-      <h3 class="name -productsans -bold -blue">Marcos Mario</h3>
-      <p class="description">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde
-        o século XVI.</p>
-    </div>
-
-    <nav class="medias">
-      <a class="link" href="https://instagram.com/gdgmaceio" title="Instagram">
-        <i class="mdi mdi-instagram"></i>
-      </a>
-      <a class="link" href="https://instagram.com/gdgmaceio" title="Facebook">
-        <i class="mdi mdi-facebook"></i>
-      </a>
-      <a class="link" href="https://instagram.com/gdgmaceio" title="Twitter">
-        <i class="mdi mdi-twitter"></i>
-      </a>
-      <a class="link" href="https://instagram.com/gdgmaceio" title="Linkedin">
-        <i class="mdi mdi-linkedin"></i>
-      </a>
-    </nav>
-  </li>
-
-  <li class="item">
-    <div class="avatar">
-      <div class="photo -round">
-        <img class="image" src="http://via.placeholder.com/260x260" alt="Foto Nome do Palestrantes">
-      </div>
-    </div>
-
-    <div class="text">
-      <h3 class="name -productsans -bold -blue">Marcos Mario</h3>
-      <p class="description">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde
-        o século XVI.</p>
-    </div>
-
-    <nav class="medias">
-      <a class="link" href="https://instagram.com/gdgmaceio" title="Instagram">
-        <i class="mdi mdi-instagram"></i>
-      </a>
-      <a class="link" href="https://instagram.com/gdgmaceio" title="Facebook">
-        <i class="mdi mdi-facebook"></i>
-      </a>
-      <a class="link" href="https://instagram.com/gdgmaceio" title="Twitter">
-        <i class="mdi mdi-twitter"></i>
-      </a>
-      <a class="link" href="https://instagram.com/gdgmaceio" title="Linkedin">
+      <a class="link"
+        href="{{speaker.linkedin}}"
+        title="Linkedin"
+        *ngIf="speaker.linkedin">
         <i class="mdi mdi-linkedin"></i>
       </a>
     </nav>

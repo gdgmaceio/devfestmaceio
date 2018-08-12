@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SpeakerService } from './../../../services/speaker.service';
+import { Speaker } from './../../../models/speaker';
 
 @Component({
   selector: 'app-speaker-list',
@@ -7,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class SpeakerListComponent implements OnInit {
+  speakers: Speaker[];
 
-  constructor() { }
+  constructor(private speakerService: SpeakerService) { }
 
   ngOnInit() {
+    this.speakerService.getSpeakers().subscribe(speakers => {
+      this.speakers = speakers;
+    });
   }
 
 }

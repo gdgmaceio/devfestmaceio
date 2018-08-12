@@ -11,7 +11,7 @@ export const environment = {
     projectId: 'devfestmaceio',
     storageBucket: 'devfestmaceio.appspot.com',
     messagingSenderId: '62495706834'
-  }
+  },
 };
 
 /*
