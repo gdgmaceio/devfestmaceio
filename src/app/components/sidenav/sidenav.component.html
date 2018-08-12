@@ -1,0 +1,23 @@
+<button
+  mat-icon-button
+  [matMenuTriggerFor]="menu">
+  <i class="mdi mdi-menu mdi-24px"></i>
+</button>
+
+<mat-menu #menu="matMenu">
+  <button
+    mat-menu-item
+    routerLink="/inicio">
+    Início
+  </button>
+  <button
+    mat-menu-item
+    routerLink="/palestrantes">
+    Palestrantes
+  </button>
+  <button
+    mat-menu-item
+    routerLink="/organizadores">
+    Organizadores
+  </button>
+</mat-menu>

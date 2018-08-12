@@ -2,6 +2,7 @@
 export * from './header';
 export * from './logo';
 export * from './navigation';
+export * from './sidenav';
 export * from './weareback';
 export * from './speaker';
 export * from './organizer';
