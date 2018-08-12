@@ -15,12 +15,14 @@ import {
   AppHeaderComponent,
   AppLogoComponent,
   AppNavigationComponent,
-  AppFooterComponent
+  AppFooterComponent,
+  AppSidenavComponent
 } from './components';
 
 const APP_COMPONENTS = [
   AppHeaderComponent,
   AppLogoComponent,
+  AppSidenavComponent,
   AppNavigationComponent,
   AppFooterComponent
 ];
@@ -30,10 +32,16 @@ import { AppRoutingModule } from './app.routing';
 
 // Import core module
 import { CoreModule } from './core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent, ...APP_LAYOUTS, ...APP_COMPONENTS],
+  declarations: [
+    AppComponent,
+    ...APP_LAYOUTS,
+    ...APP_COMPONENTS,
+  ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     CoreModule,
     AppRoutingModule,
