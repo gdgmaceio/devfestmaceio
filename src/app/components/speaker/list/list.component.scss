@@ -106,3 +106,15 @@ Author: Thiago Queiroz
     }
   }
 }
+
+/deep/ .-limit {
+  .speaker-list {
+    > .item {
+      display: none !important;
+
+      &:nth-child(-n + 3) {
+        display: flex !important;
+      }
+    }
+  }
+}
