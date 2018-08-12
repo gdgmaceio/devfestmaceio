@@ -28,6 +28,7 @@ Author: Thiago Queiroz
     height: 691px;
     background: url("/assets/images/lighthouse-background-mobile.png") center no-repeat;
     content: "";
+    background-size: cover;
   }
 
   > .text {
@@ -79,6 +80,7 @@ Author: Thiago Queiroz
       width: 2200px;
       height: 570px;
       background: url("/assets/images/lighthouse-background-desktop.png") center no-repeat;
+      background-size: contain;
     }
 
     > .text {
