@@ -1,0 +1,67 @@
+/* ===============
+
+Component: Ticket
+Author: Thiago Queiroz
+
+=============== */
+
+@import "assets/stylesheets/core/variables";
+
+.ticket {
+  & {
+    padding: 2.5rem 0;
+    position: relative;
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  >.title {
+    margin: 1rem;
+    color: #0a3b73;
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 1;
+  }
+  >.button {
+    padding: 1rem 3rem;
+    margin: 1rem;
+    background: #e1183a;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 100px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    max-width: 468px;
+  }
+
+  &:after {
+    z-index: -1;
+    position: absolute;
+    left: -43rem;
+    top: 0;
+    display: block;
+    width: 725px;
+    height: 496px;
+    content: "";
+    background: url("/assets/images/big-grey-waves.png") center no-repeat;
+    background-size: cover;
+
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ticket {
+    flex-direction: row;
+
+    >.title {
+      text-align: right;
+    }
+
+    &:after {
+      left: -6rem;
+    }
+  }
+}
