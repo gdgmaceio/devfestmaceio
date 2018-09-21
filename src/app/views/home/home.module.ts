@@ -7,6 +7,7 @@ import { LocationComponent } from '../../components';
 import { ForYouComponent } from '../../components';
 import { LookingFarAwayComponent } from '../../components';
 import { AboutComponent } from '../../components';
+import { TicketComponent } from '../../components';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { AboutComponent } from '../../components';
     LocationComponent,
     ForYouComponent,
     LookingFarAwayComponent,
-    AboutComponent
+    AboutComponent,
+    TicketComponent,
   ]
 })
 export class HomeModule {}
