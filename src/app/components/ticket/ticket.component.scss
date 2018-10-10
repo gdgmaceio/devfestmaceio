@@ -35,6 +35,12 @@ Author: Thiago Queiroz
     text-decoration: none;
     text-transform: uppercase;
     max-width: 468px;
+
+    &:hover {
+      margin-top: -5px;
+      background: lighten(#e1183a, 5%);
+      box-shadow: 0 5px 0 0 darken(#e1183a, 15%);
+    }
   }
 
   &:after {
