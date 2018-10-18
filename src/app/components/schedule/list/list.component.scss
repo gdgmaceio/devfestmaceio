@@ -13,9 +13,162 @@ Author: Thiago Queiroz
     display: flex;
     flex-direction: column;
   }
+
+  .list {
+    & {
+      display: flex;
+      flex-direction: column;
+    }
+    >.item {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.events-list {
+  & {
+    display: flex;
+    flex-direction: column;
+  }
+
+  >.item {
+    & {
+      position: relative;
+      padding: 1rem;
+      margin: 1rem;
+      border: 1px solid #e1e1e1;
+    }
+
+    &:before {
+      z-index: 1;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 15px;
+      height: 25px;
+      background: url("/assets/images/pin-location.png") center no-repeat;
+      background-size: contain;
+      content: "";
+    }
+
+    .-waveblue {
+      // background: url("/assets/images/wave-footer-blue.png") center no-repeat;
+    }
+  }
+
+  .location {
+    & {
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    &:before {
+      z-index: 1;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 15px;
+      height: 25px;
+      background: url("/assets/images/pin-location.png") center no-repeat;
+      background-size: contain;
+      content: "";
+    }
+  }
+}
+
+.turn-time {
+  & {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  &:before {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    bottom: -.5rem;
+    left: -7.5rem;
+    width: 228px;
+    height: 19px;
+    background: url("/assets/images/blue-wave.png") center no-repeat;
+    background-size: contain;
+    content: "";
+  }
+  &:after {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    top: .5rem;
+    right: -3.5rem;
+    width: 46px;
+    height: 46px;
+    background: url("/assets/images/clock-icon.png") center no-repeat;
+    background-size: contain;
+    content: "";
+  }
+}
+
+.lunch-section {
+  & {
+    margin: 5rem 0;
+    position: relative;
+  }
+  .title {
+    & {
+      padding-left: 7rem;
+      position: relative;
+      line-height: 1;
+    }
+    &:after {
+      z-index: 1;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 74px;
+      height: 88px;
+      background: url("/assets/images/lunch-bowl.png") center no-repeat;
+      background-size: contain;
+      content: "";
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .schedule-list {
+    .list {
+      & {
+        flex-direction: column;
+      }
+      >.item {
+        flex-direction: row;
+      }
+      .time {
+        margin-top: 5rem;
+      }
+    }
+  }
+  .lunch-section {
+    &:after {
+      z-index: -1;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 343px;
+      height: 234px;
+      background: url("/assets/images/seagulls-waves-2.png") center no-repeat;
+      background-size: contain;
+      content: "";
+    }
+  }
+  .events-list {
+    & {
+      flex-direction: row;
+    }
   }
 }
