@@ -13,7 +13,7 @@ Author: Thiago Queiroz
     display: grid;
     grid-template-areas: "text" "photo";
     grid-template-columns: 1fr;
-    grid-gap: 60px;
+    grid-gap: 10px;
   }
 
   > .text {
@@ -34,7 +34,57 @@ Author: Thiago Queiroz
     }
 
     > .subtitle {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    > .description {
+      margin-bottom: 4rem;
+    }
+
+    > .date {
+      & {
+        margin-bottom: 1rem;
+        padding-left: 40px;
+        position: relative;
+      }
+      
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 26px;
+        height: 24px;
+        background-image: url("/assets/images/calendar-icon.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+      }
+    }
+
+    > .address {
+      & {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-left: 40px;
+      }
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 26px;
+        height: 24px;
+        background-image: url("/assets/images/pin-icon.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+      }
     }
   }
 
@@ -66,6 +116,12 @@ Author: Thiago Queiroz
           margin-left: -12rem;
           font-size: $font-big;
         }
+      }
+      >.description {
+        margin-bottom: 2rem;
+      }
+      > .address {
+        margin-bottom: 1rem;
       }
     }
   }
