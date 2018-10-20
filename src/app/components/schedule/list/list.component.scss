@@ -13,77 +13,14 @@ Author: Thiago Queiroz
     display: flex;
     flex-direction: column;
   }
-
-  .list {
-    & {
-      display: flex;
-      flex-direction: column;
-    }
-    >.item {
-      display: flex;
-      flex-direction: column;
-    }
-  }
 }
 
-.events-list {
-  & {
-    display: flex;
-    flex-direction: column;
-  }
-
-  >.item {
-    & {
-      position: relative;
-      padding: 1rem;
-      margin: 1rem;
-      border: 1px solid #e1e1e1;
-    }
-
-    &:before {
-      z-index: 1;
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 15px;
-      height: 25px;
-      background: url("/assets/images/pin-location.png") center no-repeat;
-      background-size: contain;
-      content: "";
-    }
-
-    .-waveblue {
-      // background: url("/assets/images/wave-footer-blue.png") center no-repeat;
-    }
-  }
-
-  .location {
-    & {
-      padding-left: 1.5rem;
-      position: relative;
-    }
-
-    &:before {
-      z-index: 1;
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 15px;
-      height: 25px;
-      background: url("/assets/images/pin-location.png") center no-repeat;
-      background-size: contain;
-      content: "";
-    }
-  }
-}
-
+// Turn
 .turn-time {
   & {
+    margin: 2rem 3rem;
     display: inline-block;
     position: relative;
-    margin-bottom: 2rem;
   }
 
   &:before {
@@ -102,7 +39,7 @@ Author: Thiago Queiroz
     z-index: 1;
     display: block;
     position: absolute;
-    top: .5rem;
+    top: .85rem;
     right: -3.5rem;
     width: 46px;
     height: 46px;
@@ -110,27 +47,189 @@ Author: Thiago Queiroz
     background-size: contain;
     content: "";
   }
+
+  .title {
+    font-size: 3.4rem;
+  }
+}
+
+.turn-list {
+  & {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  >.item {
+    display: flex;
+    flex-direction: column;
+  }
+  .hour {
+    margin: 1rem 2rem 0;
+    line-height: 1;
+  }
+}
+
+.events-list {
+  & {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  >.item {
+    & {
+      position: relative;
+      padding: 1rem 1rem 2rem;
+      border: 1px solid #e1e1e1;
+    }
+
+    &:before {
+      z-index: 1;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 22px;
+      background-image: url("/assets/images/wave-footer-grey.png");
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: "";
+    }
+
+    &.-web {
+      &:before {
+        background-image: url("/assets/images/wave-footer-green.png");
+      }
+
+      .category {
+        color: #22be5a;
+      }
+    }
+    &.-mobile {
+      &:before {
+        background-image: url("/assets/images/wave-footer-blue.png");
+      }
+
+      .category {
+        color: #4f80ec;
+      }
+    }
+    &.-firebase {
+      &:before {
+        background-image: url("/assets/images/wave-footer-red.png");
+      }
+
+      .category {
+        color: #e0163a;
+      }
+    }
+
+    // Location
+    .location {
+      & {
+        display: block;
+        margin: .25rem 0 1rem;
+        padding-left: 1.25rem;
+        position: relative;
+      }
+  
+      &:before {
+        z-index: 1;
+        display: block;
+        position: absolute;
+        bottom: .25rem;
+        left: 0;
+        width: 15px;
+        height: 25px;
+        background: url("/assets/images/pin-location.png") center no-repeat;
+        background-size: contain;
+        content: "";
+      }
+    }
+
+    // Title
+    .title {
+      margin-bottom: 1rem;
+      line-height: 1;
+      font-size: 1.8rem;
+    }
+
+    // Speaker
+    .speaker {
+      & {
+        display: flex;
+        align-items: center;
+      }
+
+      .avatar {
+        & {
+          flex: 1;
+          margin-right: .5rem;
+          padding: .15rem;
+          background: url("/assets/images/avatar-circles.png") center no-repeat;
+          background-size: contain;
+        }
+    
+        > .photo {
+          & {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $white-base;
+          }
+    
+          &.-round {
+            border-radius: 50%;
+            overflow: hidden;
+          }
+    
+          > .image {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      .text {
+        flex: 4;
+      }
+
+      .name,
+      .description {
+        display: block;
+      }
+    }
+
+    // Category
+    .category {
+      display: block;
+    }
+  }
 }
 
 .lunch-section {
   & {
-    margin: 5rem 0;
+    margin: 5rem 2rem;
     position: relative;
   }
   .title {
     & {
-      padding-left: 7rem;
+      padding-left: 4rem;
       position: relative;
       line-height: 1;
+      font-size: 1.8rem;
     }
     &:after {
       z-index: 1;
       display: block;
       position: absolute;
-      top: 0;
+      top: -.75rem;
       left: 0;
-      width: 74px;
-      height: 88px;
+      width: 54px;
+      height: 64px;
       background: url("/assets/images/lunch-bowl.png") center no-repeat;
       background-size: contain;
       content: "";
@@ -140,35 +239,53 @@ Author: Thiago Queiroz
 
 @media only screen and (min-width: 768px) {
   .schedule-list {
-    .list {
-      & {
-        flex-direction: column;
-      }
-      >.item {
-        flex-direction: row;
-      }
-      .time {
-        margin-top: 5rem;
-      }
+  }
+  .turn-list {
+    & {
+      flex-direction: column;
+    }
+    >.item {
+      flex-direction: row;
+    }
+    .hour {
+      display: block;
+      margin: 5rem 2rem 0 1rem;
     }
   }
   .lunch-section {
+    & {
+      margin: 3rem 3rem 5rem;
+    }
     &:after {
       z-index: -1;
       display: block;
       position: absolute;
       top: 0;
-      right: 0;
+      right: -10rem;
       width: 343px;
       height: 234px;
       background: url("/assets/images/seagulls-waves-2.png") center no-repeat;
       background-size: contain;
       content: "";
     }
+    .title {
+      & {
+        padding-left: 7rem;
+        font-size: 3rem;
+      }
+
+      &:after {
+        top: 0;
+        width: 74px;
+        height: 88px;
+      }
+    }
   }
   .events-list {
     & {
-      flex-direction: row;
+      padding: 1rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1.5rem;
     }
   }
 }

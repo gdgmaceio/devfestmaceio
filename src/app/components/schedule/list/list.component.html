@@ -1,48 +1,135 @@
-<section class="schedule-list">
+<section class="schedule-list -productsans">
+  <div *ngFor="let schedule of schedules">
+    teste {{schedule}}
+  </div>
   <section class="morning-section">
     <header class="header turn-time">
-      <h2 class="title -darkblue">Manhã</h2>
+      <h2 class="title -darkblue -xlarge">Manhã</h2>
     </header>
 
-    <ul class="list">
+    <ul class="turn-list">
       <li class="item">
-        <strong class="time -large -bold -darkblue">8h</strong>
+        <span class="hour -darkblue -xlarge">8h</span>
         <ul class="events-list">
-          <li class="item -waveblue">
-            <span class="location -bold">Auditório 01</span>
-            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
+          <li class="item -web">
+            <span class="location -black">Auditório 01</span>
+            <h3 class="title -bold -darkblue -xlarge">A vida de DEV com a música</h3>
 
             <div class="speaker">
-              <strong>Bob Queiroz</strong>
-              <small>Google Maceió</small>
-            </div>
-
-            <strong class="category">Mobile</strong>
-          </li>
-
-          <li class="item">
-            <span class="location -bold">Auditório 01</span>
-            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
-
-            <div class="speaker">
-              <strong>Bob Queiroz</strong>
-              <small>Google Maceió</small>
-            </div>
-
-            <strong class="category">Mobile</strong>
-          </li>
-
-          <li class="item">
-              <span class="location -bold">Auditório 01</span>
-              <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
-  
-              <div class="speaker">
-                <strong>Bob Queiroz</strong>
-                <small>Google Maceió</small>
+              <div class="avatar">
+                <div class="photo -round">
+                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
+                </div>
               </div>
-  
-              <strong class="category">Mobile</strong>
-            </li>
+
+              <div class="text">
+                <strong class="name -darkblue">Bob Queiroz</strong>
+                <small class="description -darkblue -small">Google Maceió</small>
+              </div>
+            </div>
+
+            <strong class="category -textright">Web</strong>
+          </li>
+
+          <li class="item -mobile">
+            <span class="location -black">Auditório 01</span>
+            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
+
+            <div class="speaker">
+              <div class="avatar">
+                <div class="photo -round">
+                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
+                </div>
+              </div>
+
+              <div class="text">
+                <strong class="name -darkblue">Bob Queiroz</strong>
+                <small class="description -darkblue -small">Google Maceió</small>
+              </div>
+            </div>
+
+            <strong class="category -textright">Mobile</strong>
+          </li>
+
+          <li class="item -firebase">
+            <span class="location -black">Auditório 01</span>
+            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
+
+            <div class="speaker">
+              <div class="avatar">
+                <div class="photo -round">
+                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
+                </div>
+              </div>
+
+              <div class="text">
+                <strong class="name -darkblue">Bob Queiroz</strong>
+                <small class="description -darkblue -small">Google Maceió</small>
+              </div>
+            </div>
+
+            <strong class="category -textright">Firebase</strong>
+          </li>
+
+          <li class="item -web">
+            <span class="location -black">Auditório 01</span>
+            <h3 class="title -bold -darkblue -xlarge">A vida de DEV com a música</h3>
+
+            <div class="speaker">
+              <div class="avatar">
+                <div class="photo -round">
+                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
+                </div>
+              </div>
+
+              <div class="text">
+                <strong class="name -darkblue">Bob Queiroz</strong>
+                <small class="description -darkblue -small">Google Maceió</small>
+              </div>
+            </div>
+
+            <strong class="category -textright">Web</strong>
+          </li>
+
+          <li class="item -mobile">
+            <span class="location -black">Auditório 01</span>
+            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
+
+            <div class="speaker">
+              <div class="avatar">
+                <div class="photo -round">
+                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
+                </div>
+              </div>
+
+              <div class="text">
+                <strong class="name -darkblue">Bob Queiroz</strong>
+                <small class="description -darkblue -small">Google Maceió</small>
+              </div>
+            </div>
+
+            <strong class="category -textright">Mobile</strong>
+          </li>
+
+          <li class="item -firebase">
+            <span class="location -black">Auditório 01</span>
+            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
+
+            <div class="speaker">
+              <div class="avatar">
+                <div class="photo -round">
+                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
+                </div>
+              </div>
+
+              <div class="text">
+                <strong class="name -darkblue">Bob Queiroz</strong>
+                <small class="description -darkblue -small">Google Maceió</small>
+              </div>
+            </div>
+
+            <strong class="category -textright">Firebase</strong>
+          </li>
         </ul>
       </li>
     </ul>
@@ -60,20 +147,133 @@
       <h2 class="title -darkblue">Tarde</h2>
     </header>
 
-    <ul class="list">
+    <ul class="turn-list">
       <li class="item">
-        <span class="time -darkblue">8h</span>
+        <span class="hour -darkblue -xlarge">8h</span>
         <ul class="events-list">
-          <li>
-            <span class="location -bold">Auditório 01</span>
+          <li class="item -web">
+              <span class="location -black">Auditório 01</span>
+              <h3 class="title -bold -darkblue -xlarge">A vida de DEV com a música</h3>
+  
+              <div class="speaker">
+                <div class="avatar">
+                  <div class="photo -round">
+                    <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
+                  </div>
+                </div>
+  
+                <div class="text">
+                  <strong class="name -darkblue">Bob Queiroz</strong>
+                  <small class="description -darkblue -small">Google Maceió</small>
+                </div>
+              </div>
+  
+              <strong class="category -textright">Web</strong>
+          </li>
+
+          <li class="item -firebase">
+            <span class="location -black">Auditório 01</span>
             <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
 
             <div class="speaker">
-              <strong>Bob Queiroz</strong>
-              <small>Google Maceió</small>
+              <div class="avatar">
+                <div class="photo -round">
+                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
+                </div>
+              </div>
+
+              <div class="text">
+                <strong class="name -darkblue">Bob Queiroz</strong>
+                <small class="description -darkblue -small">Google Maceió</small>
+              </div>
             </div>
 
-            <strong class="category">Mobile</strong>
+            <strong class="category -textright">Firebase</strong>
+          </li>
+        </ul>
+      </li>
+
+      <li class="item">
+          <span class="hour -darkblue -xlarge">8h</span>
+        <ul class="events-list">
+          <li class="item -web">
+            <span class="location -black">Auditório 01</span>
+            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
+
+            <div class="speaker">
+              <div class="avatar">
+                <div class="photo -round">
+                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
+                </div>
+              </div>
+
+              <div class="text">
+                <strong class="name -darkblue">Bob Queiroz</strong>
+                <small class="description -darkblue -small">Google Maceió</small>
+              </div>
+            </div>
+
+            <strong class="category -textright">Mobile</strong>
+          </li>
+
+          <li class="item -web">
+            <span class="location -black">Auditório 01</span>
+            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
+
+            <div class="speaker">
+              <div class="avatar">
+                <div class="photo -round">
+                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
+                </div>
+              </div>
+
+              <div class="text">
+                <strong class="name -darkblue">Bob Queiroz</strong>
+                <small class="description -darkblue -small">Google Maceió</small>
+              </div>
+            </div>
+
+            <strong class="category -textright">Mobile</strong>
+          </li>
+
+          <li class="item -web">
+            <span class="location -black">Auditório 01</span>
+            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
+
+            <div class="speaker">
+              <div class="avatar">
+                <div class="photo -round">
+                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
+                </div>
+              </div>
+
+              <div class="text">
+                <strong class="name -darkblue">Bob Queiroz</strong>
+                <small class="description -darkblue -small">Google Maceió</small>
+              </div>
+            </div>
+
+            <strong class="category -textright">Mobile</strong>
+          </li>
+
+          <li class="item -web">
+            <span class="location -black">Auditório 01</span>
+            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
+
+            <div class="speaker">
+              <div class="avatar">
+                <div class="photo -round">
+                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
+                </div>
+              </div>
+
+              <div class="text">
+                <strong class="name -darkblue">Bob Queiroz</strong>
+                <small class="description -darkblue -small">Google Maceió</small>
+              </div>
+            </div>
+
+            <strong class="category -textright">Mobile</strong>
           </li>
         </ul>
       </li>
