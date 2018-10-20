@@ -38,7 +38,7 @@ Author: Thiago Queiroz
     }
 
     > .description {
-      margin-bottom: 1rem;
+      margin-bottom: 4rem;
     }
 
     > .date {
@@ -65,6 +65,7 @@ Author: Thiago Queiroz
 
     > .address {
       & {
+        margin-bottom: 2rem;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -115,6 +116,12 @@ Author: Thiago Queiroz
           margin-left: -12rem;
           font-size: $font-big;
         }
+      }
+      >.description {
+        margin-bottom: 1rem;
+      }
+      > .address {
+        margin-bottom: 1rem;
       }
     }
   }
