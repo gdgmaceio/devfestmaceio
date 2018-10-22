@@ -18,5 +18,4 @@ export class ScheduleListComponent implements OnInit {
       this.schedules = schedules;
     });
   }
-
 }
