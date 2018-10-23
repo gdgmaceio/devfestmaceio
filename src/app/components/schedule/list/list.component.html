@@ -1,23 +1,31 @@
-<section class="schedule-list">
+<section class="schedule-list -productsans">
   <section class="morning-section">
-    <header class="header">
-      <h2 class="title -blue">Manhã</h2>
+    <header class="header turn-time">
+      <h2 class="title -darkblue -xlarge">Manhã</h2>
     </header>
-
-    <ul class="list">
-      <li class="item">
-        <span class="time -blue">8h</span>
+    
+    <ul class="turn-list">
+      <li class="item" *ngFor="let item of mornings">
+        <span class="hour -darkblue -xlarge">{{item.description}}</span>
         <ul class="events-list">
-          <li>
-            <span>Auditório 01</span>
-            <h2>A vida de DEV com a música</h2>
-
+          <li class="item -{{event.category}}" *ngFor="let event of item.events">
+            <span class="location -black">{{event.room}}</span>
+            <h3 class="title -bold -darkblue -xlarge">{{event.title}}</h3>
+        
             <div class="speaker">
-              <strong>Bob Queiroz</strong>
-              <small>Google Maceió</small>
+              <div class="avatar">
+                <div class="photo -round">
+                  <img class="image" src="{{event.speaker.avatar}}" alt="Foto de {{event.speaker.name}}">
+                </div>
+              </div>
+            
+              <div class="text">
+                <strong class="name -darkblue">{{event.speaker.name}}</strong>
+                <small class="description -darkblue -small">{{event.speaker.description}}</small>
+              </div>
             </div>
-
-            <strong class="category">Mobile</strong>
+        
+            <strong class="category -textright">{{event.category}}</strong>
           </li>
         </ul>
       </li>
@@ -25,32 +33,39 @@
   </section>
 
   <section class="lunch-section">
-    <header class="header">
-      <h2 class="title -blue">
-          <strong>Almoço</strong> | Hora de reabastecer!
-      </h2>
-    </header>
+    <h2 class="title -darkblue">
+      <strong>Almoço</strong><br />
+      Hora de reabastecer!
+    </h2>
   </section>
 
   <section class="afternoon-section">
-    <header class="header">
-      <h2 class="title -blue">Tarde</h2>
+    <header class="turn-time">
+      <h2 class="title -darkblue">Tarde</h2>
     </header>
 
-    <ul class="list">
-      <li class="item">
-        <span class="time -blue">8h</span>
+    <ul class="turn-list">
+      <li class="item" *ngFor="let item of afternoons">
+        <span class="hour -darkblue -xlarge">{{item.description}}</span>
         <ul class="events-list">
-          <li>
-            <span>Auditório 01</span>
-            <h2>A vida de DEV com a música</h2>
-
+          <li class="item -{{event.category}}" *ngFor="let event of item.events">
+            <span class="location -black">{{event.room}}</span>
+            <h3 class="title -bold -darkblue -xlarge">{{event.title}}</h3>
+      
             <div class="speaker">
-              <strong>Bob Queiroz</strong>
-              <small>Google Maceió</small>
+              <div class="avatar">
+                <div class="photo -round">
+                  <img class="image" src="{{event.speaker.avatar || 'https://via.placeholder.com/250x250'}}" alt="Foto de {{event.speaker.name}}">
+                </div>
+              </div>
+      
+              <div class="text">
+                <strong class="name -darkblue">{{event.speaker.name}}</strong>
+                <small class="description -darkblue -small">{{event.speaker.description}}</small>
+              </div>
             </div>
-
-            <strong class="category">Mobile</strong>
+      
+            <strong class="category -textright">{{event.category}}</strong>
           </li>
         </ul>
       </li>
