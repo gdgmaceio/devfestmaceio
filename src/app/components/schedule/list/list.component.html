@@ -15,13 +15,13 @@
             <div class="speaker">
               <div class="avatar">
                 <div class="photo -round">
-                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
+                  <img class="image" src="{{event.speaker.avatar}}" alt="Foto de {{event.speaker.name}}">
                 </div>
               </div>
-        
+            
               <div class="text">
-                <strong class="name -darkblue">{{event.speaker}}</strong>
-                <small class="description -darkblue -small">Google Maceió</small>
+                <strong class="name -darkblue">{{event.speaker.name}}</strong>
+                <small class="description -darkblue -small">{{event.speaker.description}}</small>
               </div>
             </div>
         
@@ -55,13 +55,13 @@
             <div class="speaker">
               <div class="avatar">
                 <div class="photo -round">
-                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
+                  <img class="image" src="{{event.speaker.avatar || 'https://via.placeholder.com/250x250'}}" alt="Foto de {{event.speaker.name}}">
                 </div>
               </div>
       
               <div class="text">
-                <strong class="name -darkblue">{{event.speaker}}</strong>
-                <small class="description -darkblue -small">Google Maceió</small>
+                <strong class="name -darkblue">{{event.speaker.name}}</strong>
+                <small class="description -darkblue -small">{{event.speaker.description}}</small>
               </div>
             </div>
       
