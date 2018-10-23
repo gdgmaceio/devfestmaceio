@@ -3,134 +3,29 @@
     <header class="header turn-time">
       <h2 class="title -darkblue -xlarge">Manhã</h2>
     </header>
-
+    
     <ul class="turn-list">
-      <li class="item">
-        <span class="hour -darkblue -xlarge">8h</span>
+      <li class="item" *ngFor="let item of mornings">
+        <span class="hour -darkblue -xlarge">{{item.description}}</span>
         <ul class="events-list">
-          <li class="item -web">
-              <span class="location -black">Auditório 01</span>
-              <h3 class="title -bold -darkblue -xlarge">A vida de DEV com a música</h3>
-  
-              <div class="speaker">
-                <div class="avatar">
-                  <div class="photo -round">
-                    <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
-                  </div>
-                </div>
-  
-                <div class="text">
-                  <strong class="name -darkblue">Bob Queiroz</strong>
-                  <small class="description -darkblue -small">Google Maceió</small>
-                </div>
-              </div>
-  
-              <strong class="category -textright">Web</strong>
-          </li>
-
-          <li class="item -mobile">
-            <span class="location -black">Auditório 01</span>
-            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
-
+          <li class="item -{{event.category}}" *ngFor="let event of item.events">
+            <span class="location -black">{{event.room}}</span>
+            <h3 class="title -bold -darkblue -xlarge">{{event.title}}</h3>
+        
             <div class="speaker">
               <div class="avatar">
                 <div class="photo -round">
                   <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
                 </div>
               </div>
-
+        
               <div class="text">
-                <strong class="name -darkblue">Bob Queiroz</strong>
+                <strong class="name -darkblue">{{event.speaker}}</strong>
                 <small class="description -darkblue -small">Google Maceió</small>
               </div>
             </div>
-
-            <strong class="category -textright">Mobile</strong>
-          </li>
-        </ul>
-      </li>
-
-      <li class="item">
-          <span class="hour -darkblue -xlarge">8h</span>
-        <ul class="events-list">
-          <li class="item -web">
-            <span class="location -black">Auditório 01</span>
-            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
-
-            <div class="speaker">
-              <div class="avatar">
-                <div class="photo -round">
-                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
-                </div>
-              </div>
-
-              <div class="text">
-                <strong class="name -darkblue">Bob Queiroz</strong>
-                <small class="description -darkblue -small">Google Maceió</small>
-              </div>
-            </div>
-
-            <strong class="category -textright">Mobile</strong>
-          </li>
-
-          <li class="item -web">
-            <span class="location -black">Auditório 01</span>
-            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
-
-            <div class="speaker">
-              <div class="avatar">
-                <div class="photo -round">
-                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
-                </div>
-              </div>
-
-              <div class="text">
-                <strong class="name -darkblue">Bob Queiroz</strong>
-                <small class="description -darkblue -small">Google Maceió</small>
-              </div>
-            </div>
-
-            <strong class="category -textright">Mobile</strong>
-          </li>
-
-          <li class="item -web">
-            <span class="location -black">Auditório 01</span>
-            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
-
-            <div class="speaker">
-              <div class="avatar">
-                <div class="photo -round">
-                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
-                </div>
-              </div>
-
-              <div class="text">
-                <strong class="name -darkblue">Bob Queiroz</strong>
-                <small class="description -darkblue -small">Google Maceió</small>
-              </div>
-            </div>
-
-            <strong class="category -textright">Mobile</strong>
-          </li>
-
-          <li class="item -web">
-            <span class="location -black">Auditório 01</span>
-            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
-
-            <div class="speaker">
-              <div class="avatar">
-                <div class="photo -round">
-                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
-                </div>
-              </div>
-
-              <div class="text">
-                <strong class="name -darkblue">Bob Queiroz</strong>
-                <small class="description -darkblue -small">Google Maceió</small>
-              </div>
-            </div>
-
-            <strong class="category -textright">Mobile</strong>
+        
+            <strong class="category -textright">{{event.category}}</strong>
           </li>
         </ul>
       </li>
@@ -150,132 +45,27 @@
     </header>
 
     <ul class="turn-list">
-      <li class="item">
-        <span class="hour -darkblue -xlarge">8h</span>
+      <li class="item" *ngFor="let item of afternoons">
+        <span class="hour -darkblue -xlarge">{{item.description}}</span>
         <ul class="events-list">
-          <li class="item -web">
-              <span class="location -black">Auditório 01</span>
-              <h3 class="title -bold -darkblue -xlarge">A vida de DEV com a música</h3>
-  
-              <div class="speaker">
-                <div class="avatar">
-                  <div class="photo -round">
-                    <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
-                  </div>
-                </div>
-  
-                <div class="text">
-                  <strong class="name -darkblue">Bob Queiroz</strong>
-                  <small class="description -darkblue -small">Google Maceió</small>
-                </div>
-              </div>
-  
-              <strong class="category -textright">Web</strong>
-          </li>
-
-          <li class="item -firebase">
-            <span class="location -black">Auditório 01</span>
-            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
-
+          <li class="item -{{event.category}}" *ngFor="let event of item.events">
+            <span class="location -black">{{event.room}}</span>
+            <h3 class="title -bold -darkblue -xlarge">{{event.title}}</h3>
+      
             <div class="speaker">
               <div class="avatar">
                 <div class="photo -round">
                   <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
                 </div>
               </div>
-
+      
               <div class="text">
-                <strong class="name -darkblue">Bob Queiroz</strong>
+                <strong class="name -darkblue">{{event.speaker}}</strong>
                 <small class="description -darkblue -small">Google Maceió</small>
               </div>
             </div>
-
-            <strong class="category -textright">Firebase</strong>
-          </li>
-        </ul>
-      </li>
-
-      <li class="item">
-          <span class="hour -darkblue -xlarge">8h</span>
-        <ul class="events-list">
-          <li class="item -web">
-            <span class="location -black">Auditório 01</span>
-            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
-
-            <div class="speaker">
-              <div class="avatar">
-                <div class="photo -round">
-                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
-                </div>
-              </div>
-
-              <div class="text">
-                <strong class="name -darkblue">Bob Queiroz</strong>
-                <small class="description -darkblue -small">Google Maceió</small>
-              </div>
-            </div>
-
-            <strong class="category -textright">Mobile</strong>
-          </li>
-
-          <li class="item -web">
-            <span class="location -black">Auditório 01</span>
-            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
-
-            <div class="speaker">
-              <div class="avatar">
-                <div class="photo -round">
-                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
-                </div>
-              </div>
-
-              <div class="text">
-                <strong class="name -darkblue">Bob Queiroz</strong>
-                <small class="description -darkblue -small">Google Maceió</small>
-              </div>
-            </div>
-
-            <strong class="category -textright">Mobile</strong>
-          </li>
-
-          <li class="item -web">
-            <span class="location -black">Auditório 01</span>
-            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
-
-            <div class="speaker">
-              <div class="avatar">
-                <div class="photo -round">
-                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
-                </div>
-              </div>
-
-              <div class="text">
-                <strong class="name -darkblue">Bob Queiroz</strong>
-                <small class="description -darkblue -small">Google Maceió</small>
-              </div>
-            </div>
-
-            <strong class="category -textright">Mobile</strong>
-          </li>
-
-          <li class="item -web">
-            <span class="location -black">Auditório 01</span>
-            <h3 class="title -bold -darkblue">A vida de DEV com a música</h3>
-
-            <div class="speaker">
-              <div class="avatar">
-                <div class="photo -round">
-                  <img class="image" src="https://i.imgur.com/noBc173.jpg" alt="Foto Nome do Membro da Equipe">
-                </div>
-              </div>
-
-              <div class="text">
-                <strong class="name -darkblue">Bob Queiroz</strong>
-                <small class="description -darkblue -small">Google Maceió</small>
-              </div>
-            </div>
-
-            <strong class="category -textright">Mobile</strong>
+      
+            <strong class="category -textright">{{event.category}}</strong>
           </li>
         </ul>
       </li>

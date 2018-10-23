@@ -99,7 +99,7 @@ Author: Thiago Queiroz
       content: "";
     }
 
-    &.-web {
+    &.-Web {
       &:before {
         background-image: url("/assets/images/wave-footer-green.png");
       }
@@ -108,7 +108,7 @@ Author: Thiago Queiroz
         color: #22be5a;
       }
     }
-    &.-mobile {
+    &.-Mobile {
       &:before {
         background-image: url("/assets/images/wave-footer-blue.png");
       }
@@ -117,7 +117,7 @@ Author: Thiago Queiroz
         color: #4f80ec;
       }
     }
-    &.-firebase {
+    &.-Firebase {
       &:before {
         background-image: url("/assets/images/wave-footer-red.png");
       }

@@ -7,15 +7,16 @@ import { Schedule } from './../../../models/schedule';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-
 export class ScheduleListComponent implements OnInit {
-  schedules: Schedule[];
+  mornings: any[];
+  afternoons: any[];
 
-  constructor(private scheduleService: ScheduleService) { }
+  constructor(private scheduleService: ScheduleService) {}
 
   ngOnInit() {
     this.scheduleService.getSchedules().subscribe(schedules => {
-      this.schedules = schedules;
+      this.mornings = schedules[1].hours;
+      this.afternoons = schedules[0].hours;
     });
   }
 }
