@@ -92,14 +92,14 @@ Author: Thiago Queiroz
       left: 0;
       width: 100%;
       height: 22px;
-      background-image: url("/assets/images/wave-footer-grey.png");
+      background-image: url("/assets/images/wave-footer-black.png");
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover;
       content: "";
     }
 
-    &.-Web {
+    &.-Android {
       &:before {
         background-image: url("/assets/images/wave-footer-green.png");
       }
@@ -119,11 +119,29 @@ Author: Thiago Queiroz
     }
     &.-Firebase {
       &:before {
+        background-image: url("/assets/images/wave-footer-yellow.png");
+      }
+
+      .category {
+        color: #f5c329;
+      }
+    }
+    &.-Web {
+      &:before {
         background-image: url("/assets/images/wave-footer-red.png");
       }
 
       .category {
         color: #e0163a;
+      }
+    }
+    &.-Workshop {
+      &:before {
+        background-image: url("/assets/images/wave-footer-grey.png");
+      }
+
+      .category {
+        color: #f5c329;
       }
     }
 
@@ -155,11 +173,13 @@ Author: Thiago Queiroz
       margin-bottom: 1rem;
       line-height: 1;
       font-size: 1.8rem;
+      height: 56px;
     }
 
     // Speaker
     .speaker {
       & {
+        margin-bottom: 1rem;
         display: flex;
         align-items: center;
       }
@@ -249,8 +269,8 @@ Author: Thiago Queiroz
     }
     .hour {
       display: block;
-      margin: 5rem 2rem 0 1rem;
-      width: 82px;
+      margin: 5rem 1rem 0 0;
+      min-width: 82px;
       text-align: right;
     }
   }
