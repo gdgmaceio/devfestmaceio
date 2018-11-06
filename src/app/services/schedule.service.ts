@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class ScheduleService {
   schedulesCollection: AngularFirestoreCollection<Schedule>;
-  schedules: Observable<Schedule[]>;
+  schedules: Observable<any[]>;
 
   constructor(public afs: AngularFirestore) {
     this.schedules = this.afs.collection('schedules').valueChanges();
