@@ -20,7 +20,7 @@ export const routes: Routes = [
       { path: 'inicio', loadChildren: './views/home/home.module#HomeModule' },
       { path: 'palestrantes', loadChildren: './views/speakers/speakers.module#SpeakersModule' },
       { path: 'programacao', loadChildren: './views/schedules/schedules.module#SchedulesModule' },
-      { path: 'organizadores', loadChildren: './views/organizers/organizers.module#OrganizersModule' },
+      { path: 'organizacao', loadChildren: './views/organizers/organizers.module#OrganizersModule' },
     ]
   }
 ];

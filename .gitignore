@@ -22,6 +22,7 @@ build
 .idea/
 .temp/
 .firebaserc
+.firebase
 
 
 # Ignore Byebug command history file.
