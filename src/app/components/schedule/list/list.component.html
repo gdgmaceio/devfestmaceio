@@ -8,24 +8,26 @@
       <li class="item" *ngFor="let item of mornings">
         <span class="hour -darkblue -xlarge">{{item.description}}</span>
         <ul class="events-list">
-          <li class="item -{{event.category}}" *ngFor="let event of item.events">
-            <span class="location -black">{{event.room}}</span>
-            <h3 class="title -bold -darkblue -xlarge">{{event.title}}</h3>
-        
-            <div class="speaker">
-              <div class="avatar">
-                <div class="photo -round">
-                  <img class="image" src="{{event.speaker.avatar}}" alt="Foto de {{event.speaker.name}}">
+          <li class="item -{{event.color}}" *ngFor="let event of item.events">
+            <div class="content">
+              <span class="location -black">{{event.room}}</span>
+              <h3 class="title -bold -darkblue -xlarge">{{event.title}}</h3>
+          
+              <div class="speaker">
+                <div class="avatar">
+                  <div class="photo -round">
+                    <img class="image" src="{{event.speaker.avatar}}" alt="Foto de {{event.speaker.name}}">
+                  </div>
+                </div>
+              
+                <div class="text">
+                  <strong class="name -darkblue">{{event.speaker.name}}</strong>
+                  <small class="description -darkblue -small">{{event.speaker.description}}</small>
                 </div>
               </div>
-            
-              <div class="text">
-                <strong class="name -darkblue">{{event.speaker.name}}</strong>
-                <small class="description -darkblue -small">{{event.speaker.description}}</small>
-              </div>
+          
+              <span class="category -darkblue -textright">{{event.category}}</span>
             </div>
-        
-            <strong class="category -textright">{{event.category}}</strong>
           </li>
         </ul>
       </li>
@@ -48,24 +50,26 @@
       <li class="item" *ngFor="let item of afternoons">
         <span class="hour -darkblue -xlarge">{{item.description}}</span>
         <ul class="events-list">
-          <li class="item -{{event.category}}" *ngFor="let event of item.events">
-            <span class="location -black">{{event.room}}</span>
-            <h3 class="title -bold -darkblue -xlarge">{{event.title}}</h3>
-      
-            <div class="speaker">
-              <div class="avatar">
-                <div class="photo -round">
-                  <img class="image" src="{{event.speaker.avatar || 'https://via.placeholder.com/250x250'}}" alt="Foto de {{event.speaker.name}}">
+          <li class="item -{{event.color}}" *ngFor="let event of item.events">
+            <div class="content">
+              <span class="location -black">{{event.room}}</span>
+              <h3 class="title -bold -darkblue -xlarge">{{event.title}}</h3>
+        
+              <div class="speaker">
+                <div class="avatar">
+                  <div class="photo -round">
+                    <img class="image" src="{{event.speaker.avatar || 'https://via.placeholder.com/250x250'}}" alt="Foto de {{event.speaker.name}}">
+                  </div>
+                </div>
+        
+                <div class="text">
+                  <strong class="name -darkblue">{{event.speaker.name}}</strong>
+                  <small class="description -darkblue -small">{{event.speaker.description}}</small>
                 </div>
               </div>
-      
-              <div class="text">
-                <strong class="name -darkblue">{{event.speaker.name}}</strong>
-                <small class="description -darkblue -small">{{event.speaker.description}}</small>
-              </div>
+        
+              <strong class="category -textright">{{event.category}}</strong>
             </div>
-      
-            <strong class="category -textright">{{event.category}}</strong>
           </li>
         </ul>
       </li>
